@@ -1,6 +1,7 @@
 import React from 'react';
+import { PropTypes } from 'react';
 
-class Input extends React.Component {
+class TextInput extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -25,17 +26,22 @@ class Input extends React.Component {
   }
 }
 
-Input.propTypes = {
-
+TextInput.propTypes = {
+  id: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  className: PropTypes.string,
+  wrapperClass: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
-Input.defaultProps = {
+TextInput.defaultProps = {
 	id:'input',
 	wrapperClass:'active',
 	type:'text',
 	disabled: false,
 	className: '',
-	placeholder: '—', 
+	placeholder: '', 
 };
 
-export default Input;
+export default TextInput;
