@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from './Input'
+import TextInput from './TextInput'
 
 var ShippingDetails = React.createClass({
     getInitialState() {
@@ -56,17 +56,17 @@ var ShippingDetails = React.createClass({
 	        	{errorMessage}
 	        	<div style={{width: 300}}>
 	        		<form onSubmit={this.handleSubmit}>
-	        				<Input 	id={'fullName'}
+	        				<TextInput 	id={'fullName'}
 	        							wrapperClass={'form-group'}
 	        							placeholder={'Full Name'}
 	        							className={'form-control'}
 	        							changeHandler={this.handleChange}/>
-	        				<Input  id={'contactNumber'}
+	        				<TextInput  id={'contactNumber'}
 	        							wrapperClass={'form-group'}
 	        							placeholder={'Contact number'}
 	        							className={'form-control'}
 	        							changeHandler={this.handleChange}/>
-	        				<Input  id={'shippingAddress'}
+	        				<TextInput  id={'shippingAddress'}
 	        							wrapperClass={'form-group'}
 	        							placeholder={'Shipping Address'}
 	        							className={'form-control'}

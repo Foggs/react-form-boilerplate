@@ -4,7 +4,7 @@ import ShippingDetails from './ShippingDetails';
 import DeliveryDetails from './DeliveryDetails';
 import Confirmation from './Confirmation';
 import Success from './Success';
-import ModalAlertTimeout from './ModalAlertTimeout';
+import Header from './Header';
 
 
 import './App.css';
@@ -12,7 +12,7 @@ import './App.css';
 const App = React.createClass ({
   getInitialState() {
     return (
-      { step: 2,
+      { step: 1,
         books: [
           { id: 1, name: 'Zero to One', author: 'Peter Thiel' },
           { id: 2, name: 'Monk who sold his Ferrari', author: 'Robin Sharma' },
@@ -41,7 +41,7 @@ const App = React.createClass ({
 
     switch (this.state.step) {
       case 1:
-        return <BookList  updateFormData={this.updateFormData}
+        return <Header  updateFormData={this.updateFormData}
                           books={this.state.books}/>;
       case 2:
         return <ShippingDetails updateFormData={this.updateFormData}/>;
